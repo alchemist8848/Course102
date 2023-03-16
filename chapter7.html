@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>The Scope of Variable</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/theme/override.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					
+				<section>
+						<h1>The Scope of Variable</h2>
+							<h4>Chapter 7</h5>	
+						
+				</section>
+				<section data-background-color="orange">
+					<h4>Storage Class</h4>
+					
+				</section>
+				<section>
+					Variables can be characterized in two ways: by data type and by storage class. The data type of a variable refers to the type of information it holds, such as an integer number, a floating-point number, or a character. On the other hand, the storage class of a variable refers to its permanence and scope within the program, that is, the part of the program in which the variable is recognized.
+				</section>
+				<section>
+					Storage classes are important in C because they provide a way to control the lifetime, scope, and visibility of variables and functions within a program. By specifying the appropriate storage class for a variable or function, a programmer can determine where the variable or function is stored, how long it exists, and who can access it. This allows for efficient use of memory, proper functioning of functions, and proper handling of variables. Without storage classes, the behavior of variables and functions in a program may be unpredictable or undefined.
+				</section>
+				<section>
+					There are four different storage-class specifications in C: automatic, external, static and register. They
+are identified by the keywords a u t o , e x t e r n , s t a t i c , and r e g i s t e r , respectively.
+				</section>
+				<section>
+  <pre><code data-trim data-noescape>
+auto int a , b , c ;
+extern float root l , root2;
+static int count = 0;
+extern char star;
+	</code></pre>
+				</section>
+				<section data-background-color="orange">
+<h4>Automatic Variable</h4>
+
+				</section>
+				<section>
+					Automatic variables are always declared within a function and are local to the function in which they are
+declared; that is, their scope is confined to that function. Automatic variables defined in different functions
+will therefore be independent of one another, even though they may have the same name.
+Any variable declared within a function is interpreted as an automatic variable unless a different storage-
+class specification is shown within the declaration. 
+				</section>
+				<section>
+					This includes formal argument declarations. All of the
+variables in the programming examples encountered earlier in this book have been automatic variables.
+Since the location of the variable declarations within the program determines the automatic storage class,
+the keyword a u t o is not required at the beginning of each variable declaration. There is no harm in including
+an a u t o specification within a declaration, though this is normally not done.
+				</section>
+				<section>
+					<pre><code data-trim data-noescape>
+					#include <'stdio.h'>
+
+						long int factorial(int n);
+						
+						int main() {
+							auto int n;
+							printf("Enter a positive integer: ");
+							scanf("%d", &n);
+							printf("%d! = %ld\n", n, factorial(n));
+							return 0;
+						}
+						
+						long int factorial(int n) {
+							auto int i;
+							long int prod = 1;
+							for (i = 1; i <= n; i++) {
+								prod *= i;
+							}
+							return prod;
+						}
+					</code></pre>
+				</section>
+				<section>
+					An automatic variable does not retain its value once control is transferred out of its dejningfinction.
+Therefore, any value assigned to an automatic variable within a function will be lost once the function is
+exited. If the program logic requires that an automatic variable be assigned a particular value each time the
+function is executed, that value will have to be reset whenever the function is reentered (ie., whenever the
+function is accessed).
+				</section>
+				<section data-background-color="orange">
+					<h4>Static  Variable</h4>
+									</section>
+									<section>
+										When writing a program in C, you can either choose to write it all in one file or break it up into separate files. In a single-file program, static variables are defined within individual functions and have the same scope as automatic variables. This means that they are local to the functions in which they are defined.
+									</section>
+									<section>
+										However, static variables differ from automatic variables in that they retain their values throughout the life of the program. So, if a function is exited and then re-entered at a later time, the static variables defined within that function will still have their previous values. This feature allows functions to retain information permanently throughout the execution of the program.
+									</section>
+									<section>
+										In contrast, in a multi-file program where functions are contained in separate source files, static variables have a different scope. In this case, static variables are local to the source file in which they are defined, and cannot be accessed by functions in other source files.
+									</section>
+									<section>
+										<pre><code data-trim data-noescape>
+
+										#include <stdio.h>
+
+											void increment() {
+												static int count = 0; // static variable
+												count++;
+												printf("Count: %d\n", count);
+											}
+											
+											int main() {
+												increment(); // prints "Count: 1"
+												increment(); // prints "Count: 2"
+												increment(); // prints "Count: 3"
+												return 0;
+											}
+										</code></pre>
+									</section>
+									<section style="font-size: xx-large;">
+										Static variables are defined within a function in the same manner as automatic variables, except that the
+variable declaration must begin with the s t a t i c storage-class designation. Static variables can be utilized
+within the function in the same manner as other variables. They cannot, however, be accessed outside of their
+defining function.
+It is not unusual to define automatic or static variables having the same names as external variables. In
+such situations the local variables will take precedence over the external variables, though the values of the
+external variables will be unaffected by any manipulation of the local variables. Thus the external variables
+maintain their independence from locally defined automatic and static variables. The same is true of local
+variables within one function that have the same names as local variables within another function.
+									</section>
+<section style="font-size: xx-large;">
+	<ul>
+		<li>Static variables are defined within a function using the <code>static</code> storage-class designation.</li>
+		<li>Static variables retain their values throughout the life of the program, unlike automatic variables which are destroyed when the function they are declared in ends.</li>
+		<li>Static variables cannot be accessed outside of the function they are defined in.</li>
+		<li>Initial values can be included in the static variable declarations as constants.</li>
+		<li>The initial values are assigned to their respective variables at the beginning of program execution and retained unless different values are assigned during the computation.</li>
+		<li>Static variables without explicit initial values are assigned zeros.</li>
+	  </ul>
+</section><section>
+	<pre><code data-trim data-noescape>
+	#include <stdio.h>
+
+		long int fibonacci(int count);
+		
+		int main()
+		{
+			int count, n;
+		
+			printf("How many Fibonacci numbers?\n");
+			scanf("%d", &n);
+		
+			for (count = 1; count <= n; ++count)
+			{
+				printf("\ni = %2d F = %ld", count, fibonacci(count));
+			}
+			
+			return 0;
+		}
+		
+		long int fibonacci(int count)
+		{
+			static long int f1 = 1, f2 = 1;
+			long int f;
+		
+			f = (count < 3) ? 1 : f1 + f2;
+			f2 = f1;
+			f1 = f;
+		
+			return f;
+		}
+	</pre></code>
+</section>
+<section data-background-color="orange">
+	External Variable
+</section>
+<section>
+	Unlike automatic variables, external variables are not confined to single functions. Their scope
+Extends from the point of definition through the remainder of the program. Hence, they usually span two or more functions, often an entire program. They are often referred to as global variables.
+Since external variables are recognized globally, they can be accessed from any function that falls within
+Their scope. They retain their assigned values within this scope. Therefore an external variable can be
+Assign a value within one function, and this value can be used (by accessing the external variable) within another function.
+
+</section>
+<section>
+	The use of external variables provides a convenient mechanism for transferring information back and
+Forth between functions, In particular, we can transfer information into a function without using arguments. This is especially convenient when a function requires numerous input data items. Moreover, we now have a way to transfer multiple data items out of a function since the r e t u r n statement can return only one data item. (We will see another way to transfer information back and forth between functions we discuss pointers.)
+</section>
+<section>
+	When working with external variables, we must distinguish between external variable definitions and
+external variable declarations. An external variable definition is written in the same manner as an ordinary
+variable declaration. It must appear outside of, and usually before, the functions that access the external
+variables. An external variable definition will automatically allocate the required storage space for the
+external variables within the computer’s memory. 
+</section>
+<section>
+	The storage-class specifier e x t e r n is not required in an external variable definition, since the external
+variables will be identified by the location of their definition within the program. In fact, many C compilers
+forbid the use of e x t e r n within an external variable definition.
+</section>
+<section>
+	If a function requires an external variable that has been defined earlier in the program, then the fbnction
+may access the external variable freely, without any special declaration within the function. (Remember,
+however, that any alteration to the value an external variable within afinction will be recognized within the
+entire scope of the external variable.) On the other hand, if the fbnction definition precedes the external
+variable definition, then the function must include a declaration for that external variable. 
+</section>
+<section>
+	An external variable declaration must begin with the storage-class specifier e x t e r n . The name of the
+external variable and its data type must agree with the corresponding external variable definition that appears
+outside of the function. Storage space for external variables will not be allocated as a result of an external
+variable declaration. Moreover, an external variable declaration cannot include the assignment of initial
+values. These distinctions between an external variable definition and an external variable declaration are
+very important.
+</section>
+<section>
+	<pre><code data-trim data-noescape>
+	 #include <'stdio.h'>
+
+		// Declare an external variable
+		extern double interval;
+		
+		// Function to reduce the interval by half
+		void reduceInterval() {
+			interval /= 2.0;
+		}
+		
+		int main() {
+			// Initialize the interval variable
+			double interval = 10.0;
+			printf("Initial interval: %f\n", interval);
+		
+			// Call the interval reduction routine
+			reduceInterval();
+			printf("Interval after reduction: %f\n", interval);
+		
+			return 0;
+		}
+		</code></pre>
+</section>
+<section>
+	Finally, it should be pointed out that there are inherent dangers in the use of external variables, since an
+alteration in the value of an external variable within a function will be carried over into other parts of the
+program. Sometimes this happens inadvertently, as a side efect of some other action. Thus, there is the
+possibility that the value of an external value will be changed unexpectedly, resulting in a subtle programming
+error. You should decide carehlly which storage class is most appropriate for each particular programming
+situation.
+</section>
+			</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

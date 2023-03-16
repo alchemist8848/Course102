@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>C Fundamentals</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/theme/override.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section>
+                    <section >
+                        <h1>C Fundamentals </h2>
+                            <h4>Chapter 2</h5>					
+                    </section>
+                    <section data-background-color="silver">
+                       <img src="/Imgs/food-container.png" width="220">
+                       <img src="/Imgs/food-container(1).png" width="220">
+                       <img src="/Imgs/food.png" width="220">
+
+                       
+                    </section>
+                    <section data-background-color="silver">
+                       
+                        <img src="/Imgs/food.png" width="220">
+                        <img src="/Imgs/archive.png" width="220">
+                        <img src="/Imgs/open-box.png" width="220">
+
+                        
+                     </section>
+
+                    <section data-background-color="orange">
+                        <h4>The C Character set</h4>
+                    </section>
+                    <section>
+                        <b>The C Character Set </b>refers to the set of valid characters that can be used in a C program. It includes the letters of the alphabet (both uppercase and lowercase), digits, punctuation marks, and a few special characters such as the space character and the null character. The C Character Set is specified in the C standard and is used as the basis for the syntax and semantics of the C language.
+                    </section>
+                    <section>
+                        <h6>Type of C character set</h6>
+                        <ul>
+                            <li>Alphabets </li>
+                            <li>Digit</li>
+                            <li>Special Character </li>
+                            <li>White space</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h6>Alphabets</h6>
+                        In C programming, small letters and capital letters are distinct. Uppercase and lowercase letters of the English alphabet (A-Z, a-z)
+                    </section>
+                    <section>
+                        <h6>Digits</h6>
+                        C programming support 10 digit (0-9) which are used to construct numerical value. 
+                    </section>
+                    <section>
+                        <h6>Special character</h6>
+
+                        C programming supports set of special symbols that include symbols to perform mathematical operation, check condition and other special symbol. Special character %,&,*,etc.
+
+                    </section>
+                    <section>
+                        <h6>White space</h6>
+                        In computer programming,  white space is a character that represent vertical space in typography.  Enter key(\n), tab space key(\t), space key ( −), back space key (‘\b’) and so on.
+
+                    </section>
+                    <section data-background-color="orange">
+                        <h4>Keywords</h4>
+                    </section>
+                    <section>
+                        <h6>Keywords</h6>
+
+                        Keywords are those words in C programming language whose meaning is already known to the compiler.
+
+Keywords have standard predefined meaning. 
+
+                    </section>
+                    <section>
+                        Keywords are also known as reserved words and we cannot alter the meaning of keywords.                     
+                        Keywords are basic building block for developing C programs. There are only 32 keywords in standard C and these keywords must be written in lowercase. 
+                    </section>
+                    <section style="font-size: xx-large;">
+                        <table>
+                            <tr>
+                                <th>Keyword</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>auto</td>
+                                <td>Specifies that a variable is to be automatically allocated and deallocated by the compiler.</td>
+                            </tr>
+                            <tr>
+                                <td>break</td>
+                                <td>Exits a loop or switch statement.</td>
+                            </tr>
+                            <tr>
+                                <td>case</td>
+                                <td>Provides a label for a switch statement.</td>
+                            </tr>
+                            <tr>
+                                <td>char</td>
+                                <td>Defines a variable of type char (a single character).</td>
+                            </tr>
+                            <tr>
+                                <td>const</td>
+                                <td>Declares a variable as constant (cannot be modified).</td>
+                            </tr>
+                      
+                        </table>
+                        
+                    </section>
+                    <section style="font-size: xx-large;">
+                        <table>
+                           
+                            <tr>
+                                <td>continue</td>
+                                <td>Skips the current iteration of a loop.</td>
+                            </tr>
+                            <tr>
+                                <td>default</td>
+                                <td>Provides a default case for a switch statement.</td>
+                            </tr>
+                            <tr>
+                                <td>do</td>
+                                <td>Starts a do-while loop.</td>
+                            </tr>
+                            <tr>
+                                <th>Keyword</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>double</td>
+                                <td>Defines a variable of type double (a double-precision floating-point number).</td>
+                            </tr>
+                            <tr>
+                                <td>else</td>
+                                <td>Provides an alternative code path for an if statement.</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section style="font-size: xx-large;">
+                        <table>
+                           
+                            <tr>
+                                <td>enum</td>
+                                <td>Defines an enumeration (a set of named integer constants).</td>
+                            </tr>
+                            <tr>
+                                <td>extern</td>
+                                <td>Indicates that a variable or function is defined elsewhere.</td>
+                            </tr>
+                            <tr>
+                                <td>float</td>
+                                <td>Defines a variable of type float (a single-precision floating-point number).</td>
+                            </tr>
+                            <tr>
+                                <td>for</td>
+                                <td>Starts a for loop.</td>
+                            </tr>
+                            <tr>
+                                <td>goto</td>
+                                <td>Transfers control to a labeled statement.</td>
+                            </tr>
+                            <tr>
+                                <td>if</td>
+                                <td>Evaluates a condition and performs a code path if the condition is true.</td>
+                            </tr>
+                        </table>
+                    
+                    </section>
+                    <section style="font-size: xx-large;">
+                        <table>
+                            <tr>
+                                <th>Keyword</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>inline</td>
+                                <td>Declares a function as inline, hinting to the compiler that it should be inlined.</td>
+                            </tr>
+                            <tr>
+                                <td>int</td>
+                                <td>Defines a variable of type int (an integer).</td>
+                            </tr>
+                            <tr>
+                                <td>long</td>
+                                <td>Defines a variable of type long (a long integer).</td>
+                            </tr>
+                            <tr>
+                                <td>register</td>
+                                <td>Hints to the compiler that a variable should be stored in a register.</td>
+                            </tr>
+                            <tr>
+                                <td>return</td>
+                                <td>Returns control to the calling function and returns a value (if specified).</td>
+                            </tr>
+                            
+                        </table>
+                        
+                    </section>
+                    <section style="font-size: xx-large;">
+                        <table>
+                            <tr>
+                                <td>short</td>
+                                <td>Defines a variable of type short (a short integer).</td>
+                            </tr>
+                            <tr>
+                                <td>signed</td>
+                                <td>Indicates that a variable may have a negative value (default for integral types).</td>
+                            </tr>
+                            <tr>
+                                <td>sizeof</td>
+                                <td>Determines the size of a variable or data type.</td>
+                            </tr> 
+                            <tr>
+                                <th>Keyword</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>static</td>
+                                <td>Makes a variable or function accessible only within the file it is declared in.</td>
+                            </tr>
+                            <tr>
+                                <td>struct</td>
+                                <td>Defines a struct (a composite data type containing several variables of different types).</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section>
+                        <table style="font-size: xx-large;">
+                           <tr>
+                                <td>switch</td>
+                                <td>Evaluates an expression and branches to a case based on the value of the expression.</td>
+                            </tr>
+                            <tr>
+                                <td>typedef</td>
+                                <td>Creates a new data type with a specific name.</td>
+                            </tr>
+                            <tr>
+                                <td>union</td>
+                                <td>Defines a union (a composite data type containing several variables that share the same memory location).</td>
+                            </tr>
+                            <tr>
+                                <td>unsigned</td>
+                                <td>Indicates that a variable may only have positive values.</td>
+                            </tr>
+                            <tr>
+                                <td>void</td>
+                                <td>Indicates that a function or variable has no type or that a pointer has no value.</td>
+                            </tr>
+                            <tr>
+                                <td>volatile</td>
+                                <td>Indicates that a variable may be modified by an external source.</td>
+                            </tr>
+                        </table>
+                        
+                    </section>
+                    <section data-background-color="orange">
+                        <h4>Identifier</h4>
+                    </section>
+                    <section>
+                 
+                        In the C programming language, <b>an identifier</b> is a name given to a variable, function, or any other user-defined item. An identifier is used to identify these items within the program and to reference them elsewhere in the code.
+
+                    </section>
+                    <section>
+                        In C, identifiers can contain letters, digits, and underscores, but they must begin with a letter or an underscore. They are case-sensitive, which means that "myVariable" and "myvariable" are considered to be different identifiers.
+
+                    </section>
+                    <section style="font-size: xx-large;">
+                        <h4>Rules for creating a valid identifier </h4>
+                        <ul>
+                          <li>  Identifiers must begin with a letter or an underscore (_).</li>
+                          <li>Identifiers can contain letters, digits, and underscores.</li>
+                          <li>Identifiers cannot contain any other special characters or symbols, except for the underscore.</li>
+                          <li>Identifiers are case-sensitive, which means that "myVariable" and "myvariable" are considered to be different identifiers.</li>
+                        </ul>
+                    </section>
+                    <section style="font-size: xx-large;">
+                        <ul>
+                            <li>Identifiers cannot be a keyword of C language.</li>
+  <li>Identifiers should not be too long, as the compiler may not recognize them. The maximum length of an identifier is implementation-defined, but it is typically around 31 characters.</li>
+  <li>Identifiers should be meaningful and should represent the purpose of the variable, function or any other user-defined item it represents.</li>
+</ul>
+                    
+                    </section>
+                    <section style="font-size: xx-large;">
+                        <h4>Example of Valid Identifier </h4>
+                        <ul>
+                            <li>counter</li>
+                            <li>_private_counter</li>
+                            <li>is_done</li>
+                            <li>x</li>
+                            <li>y</li>
+                            <li>z</li>
+                            <li>result</li>
+                            <li>average_score</li>
+                            <li>student_name</li>
+                            <li>_temp</li>
+                          </ul>
+                          
+                    </section>
+                    <section>
+                        <h4>Example of InValid Identifier </h4>
+                   <ul>
+                            <li>a  rea   	(space can not be used)</li>
+
+                            <li>1test 		(must start from letter)</li>
+                            
+                           <li> my-count 	(hyphen is not allowed)</li>
+                            
+                            <li>f(x) 		(parantheses are not allowed)</li>
+                            
+                            <li>for 		(keyword can not be used as an identifier)</li>
+                            
+                        </ul>
+                    </section>
+                    <section data-background-color="orange">
+                        <h4>Data Type</h4>
+                    </section>
+                    <section style="font-size: x-large;">
+                        <table style="text-align:center;" class="table table-bordered">
+                            <tbody><tr>
+                            <th style="width:23%;text-align:center;">Type</th>
+                            <th style="width:20%;text-align:center;">Storage size</th>
+                            <th style="text-align:center;">Value range</th>
+                            </tr>
+                            <tr>
+                            <td>char</td>
+                            <td>1 byte</td>
+                            <td>-128 to 127 or 0 to 255</td>
+                            </tr>
+                            <tr>
+                            <td>unsigned char</td>
+                            <td>1 byte</td>
+                            <td>0 to 255</td>
+                            </tr>
+                            <tr>
+                            <td>signed char</td>
+                            <td>1 byte</td>
+                            <td>-128 to 127</td>
+                            </tr>
+                            <tr>
+                            <td style="vertical-align:middle;">int</td>
+                            <td style="vertical-align:middle;">2 or 4 bytes</td>
+                            <td>-32,768 to 32,767 or -2,147,483,648 to 2,147,483,647</td>
+                            </tr>
+                            <tr>
+                            <td>unsigned int</td>
+                            <td>2 or 4 bytes</td>
+                            <td>0 to 65,535 or 0 to 4,294,967,295</td>
+                            </tr>
+                            <tr>
+                            <td>short</td>
+                            <td>2 bytes</td>
+                            <td>-32,768 to 32,767</td>
+                            </tr>
+                            <tr>
+                            <td>unsigned short</td>
+                            <td>2 bytes</td>
+                            <td>0 to 65,535</td>
+                            </tr>
+                            <tr>
+                            <td>long</td>
+                            <td>8 bytes or (4bytes for 32 bit OS)</td>
+                            <td>-9223372036854775808 to 9223372036854775807</td>
+                            </tr>
+                            <tr>
+                            <td>unsigned long</td>
+                            <td>8 bytes</td>
+                            <td>0 to 18446744073709551615</td>
+                            </tr>
+                            </tbody></table>
+                    </section>
+                    <section data-background-color="orange">
+                        <h4>Variables</h4>
+                    </section>
+                    <section>
+                        <b>Variables</b> are named locations in computer memory where values can be stored and manipulated in a program. They are used to represent values that may change during the execution of a program. Variables must be declared with a specific data type, such as integer, float, or char, which determines the type of values that can be stored in the variable. The value stored in a variable can be retrieved, modified, or used as part of a calculation in the program.
+                    </section>
+                    <section>
+                        <p>To declare a variable, specify the type and assign it a value:</p>
+                        <pre><code data-trim data-noescape>
+                            data_type var;                          
+                            
+                            data_type var1, var2, var3, ...., varN;
+                            
+                            data_type variable_name;
+                            
+                            data_type comma_separated_list_of variables;</code></pre>
+
+                    </section>
+                   <section>
+                    <h4>Examples</h4>
+                    <pre><code data-trim data-noescape>
+                        int var1, var2, count;
+                        int x = 10;
+                        float y = 3.14;
+                        char z = 'a';
+                        double area, num1, factorial;
+                        double a = 2.71828;
+                        short b = 32767;
+                        long c = 123456789;
+                        long int x, y, z;
+                        unsigned int d = 4294967295;
+                    </code></pre>
+                        
+                   </section>
+                   <section data-markdown="/lab/Chap2_Lab1.md"
+                   data-separator="^\n\n\n"
+                   data-separator-vertical="^\n\n"
+                   data-separator-notes="^Note:"
+                   data-charset="iso-8859-15">
+          </section>
+                   <section data-background-color="orange">
+                    <h4>Constants</h4>
+                </section>
+                   <section>
+                    In the C programming language, a constant is a value that cannot be changed during the execution of a program. Constants can be of various data types, such as integers, floating-point numbers, characters, and strings. Constants are declared using the const keyword and can be used in place of variables to provide fixed values.
+                   </section>
+                   <section>
+                        <p>To declare a constant, add const keyword, specify the datatype and assign it a value:</p>
+                        <pre><code data-trim data-noescape>const datatype identifier = value; </code></pre>
+                        <pre><code data-trim data-noescape>#define identifier value </code></pre>
+
+                    </section>
+                    <section data-markdown="/lab/Chap2_Lab2.md"
+                   data-separator="^\n\n\n"
+                   data-separator-vertical="^\n\n"
+                   data-separator-notes="^Note:"
+                   data-charset="iso-8859-15">
+          </section>
+                   
+                    <section data-background-color="orange">
+                        <h4>Symbolic Constant</h4>
+                    </section>
+                    <section style="font-size:xx-large">
+                    A <b>symbolic constant</b> is a name that substitutes for a sequence of characters. The characters may represent a
+numeric constant, a character constant or a string constant. Thus, a symbolic constant allows a name to appear
+in place of a numeric constant, a character constant or a string. When a program is compiled, each occurrence
+of a symbolic constant is replaced by its corresponding character sequence.
+Symbolic constants are usually defined at the beginning of a program. The symbolic constants may then
+appear later in the program in place of the numeric constants, character constants, etc. that the symbolic
+constants represent</section>
+<section>
+    <pre><code data-trim data-noescape>#define   symbolic_constant_name   value_of_the_constant</code></pre>
+    <pre><code data-trim data-noescape>
+        #define PI 3.141592
+        #define GOLDENRATIO 1.6
+        #define MAX 500
+        </code></pre>
+</section>
+
+<section data-background-color="orange"> <h4>Lab </section>
+    <section data-markdown="/lab/Chap2_Lab3.md"
+    data-separator="^\n\n\n"
+    data-separator-vertical="^\n\n"
+    data-separator-notes="^Note:"
+    data-charset="iso-8859-15">
+</section>
+    <section data-markdown="/lab/Chap2_Lab4.md"
+    data-separator="^\n\n\n"
+    data-separator-vertical="^\n\n"
+    data-separator-notes="^Note:"
+    data-charset="iso-8859-15">
+</section>
+
+
+
+</section>
+                   
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

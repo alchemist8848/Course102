@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Control Structure </title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/override.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>					  
+						<h1>Control Structure </h1>
+						  <h4>Chapter 5</h4>	
+					  </section> 	
+					  	
+				
+					<section>
+						In C , the control flow of the program is sequential, meaning that it moves from one instruction to the next in a linear fashion. However, you may want to repeat certain sets of instructions or even skip them when writing logic. This is where control statements, also known as decision-making declarations, come in. They allow you to make decisions based on certain conditions and alter the flow of execution accordingly.
+					</section> 
+					<section>
+						Control statements are used to evaluate conditions and determine the course of action to be taken. If no condition is present, the statements will be executed sequentially. However, if a condition is present, the flow of execution may change based on the outcome of the condition. This allows you to repeat certain sets of instructions or skip them when writing logic.
+					</section>	
+					<section>
+						Control Structure, as name suggests, is basically a set of statements and control statements that are controlling their execution.
+					</section>
+					<section data-background-color="orange">
+						<h4>Condition Statements</h4>
+						<img src="/imgs/ControlStatements.png">
+					</section>
+					<section>
+						
+						  Conditional statements are used to make decisions based on certain conditions. These statements are used to execute a block of code only if a certain condition is true
+						
+						</section>
+						<section data-background-color="orange"> 
+							<h4 >Loop Statements </h4>
+							<img src="/imgs/loop.png">
+						</section>
+						<section >
+							
+							  A loop statement is a control flow structure that allows a block of code to be executed repeatedly for a specified number of times or until a certain condition is met. It is a fundamental concept in programming that allows for efficient execution of repetitive tasks. There are different types of loop statements such as for loop, while loop, and do-while loop, each with its own unique syntax and use cases.							
+							</section>
+							<section data-background-color="orange">
+								<h4 >Break Control Statements </h4>
+								<img src="/imgs/cpp_break_statement.jpg">
+							</section>
+							<section>
+								
+								  A break statement is a control flow statement that is used to prematurely exit a loop, switch statement, or a labeled block. It causes the program to immediately leave the current loop or switch statement and continue executing the next line of code following the loop or switch. The break statement is typically used in conjunction with a conditional statement, in order to exit the loop or switch when a certain condition is met.						</textarea>
+								</section>
+								<section data-background-color="orange">
+									If, If Else, Switch
+								</section>
+								<Section>
+									The if - else statement is used to carry out a logical test and then take one of two possible actions,
+depending on the outcome of the test (i.e., whether the outcome is true or false).
+The else portion of the if - else statement is optional.<pre><code>if ( expression) statement</code></pre> </section>
+<section>
+
+The expression must be placed in parentheses, as shown. In this form, the statement will be executed
+only if the expression has a nonzero value (i.e., if expression is true). If the expression has a value of
+zero (i.e., if expression is false), then the statement will be ignored.
+									</Section>
+									<section>
+										<img src="/imgs/ifelse.png" width="420">
+									</section>
+									
+
+								<section data-markdown="/lab/Chap5_Lab1.md"
+         data-separator="^\n\n\n"
+         data-separator-vertical="^\n\n"
+         data-separator-notes="^Note:"
+         data-charset="iso-8859-15">
+</section>
+<section data-markdown="/lab/Chap5_Lab2.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+
+<section data-markdown="/lab/Chap5_Lab3.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+<section>
+	<img src="/imgs/multipleifelse.png">
+</section>
+
+<section data-markdown="/lab/Chap5_Lab4.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+<Section>
+	The switch statement in C is an alternate to if-else-if ladder statement which allows us to execute multiple operations for the different possibles values of a single variable called switch variable. Here, We can define various statements in the multiple cases for the different values of a single variable.
+</Section>
+<section data-markdown="/lab/Chap5_Lab5.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+
+<section data-markdown="/lab/Chap5_Lab6.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+<section data-background-color="orange">
+	<h4 >Loops</h4>
+	
+</section>
+<section>
+	The for loop is used in the case where we need to execute some part of the code until the given condition is satisfied. The for loop is also called as a per-tested loop. It is better to use for loop if the number of iteration is known in advance.
+</section>
+<section>
+	<img src="/Imgs/looping.png" width="320">
+</section>
+<section>
+	<pre><code>for(initialization;condition;incr/decr){  
+		//code to be executed  
+		}  </code></pre>
+		The syntax for a for loop usually includes an initialization statement, a termination condition, and an iteration statement, which determine how many times the loop will run and how the loop variable will change each time the loop is executed.
+</section>
+<section data-markdown="/lab/Chap5_Lab7.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+<section data-markdown="/lab/Chap5_Lab8.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+<section data-markdown="/lab/Chap5_Lab9.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+<section>
+	A while loop in C is another type of looping structure that allows you to repeat a block of code as long as a certain condition is true. The while loop is used when you do not know the number of iterations beforehand, and the loop continues to execute as long as the condition specified in the loop is true.
+</section>
+<section>
+	<pre><code>while (condition) {
+		// code to be executed
+	}
+	</code></pre>
+	condition is an expression that is evaluated before each iteration of the loop. If the condition evaluates to true, the loop will be executed, and if it evaluates to false, the loop will exit.
+
+    The code inside the curly braces {} is the code that will be executed repeatedly as long as the condition remains true.
+</section>
+
+<section data-markdown="/lab/Chap5_Lab10.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+<section data-markdown="/lab/Chap5_Lab11.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+<section data-markdown="/lab/Chap5_Lab12.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+<section>
+	The do while loop is a post tested loop. Using the do-while loop, we can repeat the execution of several parts of the statements. The do-while loop is mainly used in the case where we need to execute the loop at least once. The do-while loop is mostly used in menu-driven programs where the termination condition depends upon the end user.
+</section>
+<section>
+	<pre><code>do
+		{
+			//Statements 
+		
+		}while(condition test);</code></pre> do while loop is similar to while loop with one exception that it executes the statements inside the body of do-while before checking the condition. On the other hand in the while loop, first the condition is checked and then the statements in while loop are executed. So you can say that if a condition is false at the first place then the do while would run once, however the while loop would not run at all.
+</section>
+<section data-markdown="/lab/Chap5_Lab13.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+<section data-markdown="/lab/Chap5_Lab14.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+<section data-markdown="/lab/Chap5_Lab15.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+<section>
+	The "break" statement is a control flow statement that can be used inside loops and switch-case statements to interrupt the normal flow of execution.<br/>
+In loops, the "break" statement is used to immediately exit the loop and move on to the next statement after the loop.
+</section>
+<section>
+	The "continue" statement is a control flow statement that can be used inside loops to skip the remaining statements in the current iteration and immediately move on to the next iteration of the loop.
+</section>
+<section style="color:red;">
+	The "goto" statement is a control flow statement in C that allows for an unconditional jump to a labeled statement in the same function. The labeled statement is specified by a label, which is an identifier followed by a colon.
+</section>
+<section data-markdown="/lab/Chap5_Lab16.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+<section data-markdown="/lab/Chap5_Lab17.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+<section data-markdown="/lab/Chap5_Lab18.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+<section data-markdown="/lab/Chap5_Lab19.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+					</section>
+
+				
+
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+
+		</script>
+
+	</body>
+</html>

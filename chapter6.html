@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Control Structure </title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/override.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>					  
+						<h1>Function</h1>
+						  <h4>Chapter 6</h4>	
+					  </section> 	
+					  	
+				
+					<section>
+						<p>Functions in C are the basic building blocks of a C program. A function is a block of statements that take inputs, do the computation, and provide the resultant output. Various names, like a method, sub-routine, and procedure, are also used to refer to the function.
+
+						</p>
+					</section> 
+					
+					<section>
+						Some of the common characteristics of function are,
+						<ul>
+							<li>Every function has a unique name within a program. The name is used to call it from the main() function or another function.</li>
+							<li>A function performs a specific task. A task is a specific job that your program must perform as a part of its overall operation. E.g., if you have to write a program to create a circle and color it, you can code a function to create a circle and another function to color it. </li>
+						</ul>
+					</section>	
+					<section>
+						<ul>
+						<li>A function can optionally return a value to the calling program. Suppose a function is simply performing some kind of operation that doesn't require a return value, such as printing a message to the console or updating a variable. In that case, it may not need to return anything. In this case, the return type of the function would be void. On the other hand, if a function is performing some calculation that needs to be used elsewhere in the program, such as calculating the area of a rectangle, then it should return the result of that calculation. In this case, the function's return type would be the type of the result that it calculates.</li>
+					</ul>
+					</section>
+				
+					<section data-background-color="orange">
+						<h4>Defining Functions</h4>
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape>
+							return_type function_name(parameter1_type parameter1, parameter2_type parameter2, ...)
+						    {
+								// function body
+								// return statement
+							}
+							</code>
+						</pre>
+							</section>
+					<section>
+						<img src="/Imgs/functionnamuna.png"/>
+					</section>
+					<section style="font-size: xx-large;">
+						<p>In C programming, a function definition consists of two main parts: the function declarator and the function body.
+							</p><p> The first line of a function definition specifies the data type of value that the function returns, followed by the function name and optionally a list of arguments enclosed in parentheses and separated by commas. Each argument is declared with its corresponding data type. If the function does not have any arguments, an empty pair of parentheses must follow the function name.</p>
+<p>The function body is the block of code that is executed when the function is called. It is enclosed in braces {} and can contain any valid C code, such as loops, conditional statements, function calls, and other statements.</p>
+					</section>
+					<section style="font-size: xx-large;">
+						The return statement is used to send information back from a function to the calling portion of the program. It also causes the program logic to return to the point from which the function was accessed. The return statement is typically written as "return expression," where the expression is optional. If the expression is included, the value of the expression is returned to the calling portion of the program. However, a function can only return one value via return. If the return statement is omitted altogether, the control simply reverts back to the calling portion of the program without returning any information. Therefore, it is recommended to include an empty return statement in such situations to clarify the logic and accommodate future modifications to the function.
+					</section>
+					<section style="font-size: xx-large;">
+						When we declare no return type of function in C, the compiler assumes that the function returns an integer by default. If the function returns a value of a different type or no value at all, it can result in errors during the compilation or at runtime.
+
+In the specific example mentioned, the function expects to return an integer, but the variable prod is declared as a long integer within the function. This can lead to inconsistency in the return value and may cause errors. Some compilers may generate a diagnostic error and stop compiling the program without completing it.
+
+To avoid such errors, it is good programming practice to always declare the return type explicitly in the function definition. If a function does not return any value, its return type should be declared as void.
+					</section>
+
+					<section data-background-color="orange">
+						<h4>Use Of Function</h4>
+					</section>
+					<section>To call a function, you need to specify its name followed by a list of arguments in parentheses separated by commas. If the function doesn't need any arguments, you still have to include empty parentheses after its name. The function call can be a part of a simple expression like an assignment statement or one of the operands in a complex expression.
+						</section>
+					<section>
+						<pre><code data-trim data-noescape>
+							print_hello();
+							int sum = add_numbers(2, 3);
+							int rate=return_rate();
+						</code></pre>
+
+					</section>
+					<section>
+						<pre><code data-trim data-noescape>
+							#include <stdio.h>
+
+								void print_hello() {
+									printf("Hello, world!\n");
+								}
+								
+								int main() {
+									print_hello(); // Calling the function
+									return 0;
+								}
+								
+						</code></pre>
+
+					</section>
+					<section>
+						<pre><code data-trim data-noescape>
+							#include <stdio.h>
+
+								// Function to calculate the cube of a number
+								int cube(int num) {
+									return num * num * num;
+								}
+								
+								int main() {
+									int num, result;
+									
+									printf("Enter a number: ");
+									scanf("%d", &num);
+									
+									// Call the cube function and store the result
+									result = cube(num);
+									
+									printf("The cube of %d is %d\n", num, result);
+									
+									return 0;
+								}
+								
+						</code></pre>
+					</section>
+					<section>
+						<pre><code data-trim data-noescape>
+							#include <'stdio.h'>
+
+								// Function to determine the maximum of two numbers
+								int maximum(int num1, int num2) {
+									if (num1 > num2) {
+										return num1;
+									} else {
+										return num2;
+									}
+								}
+								
+								int main() {
+									int num1, num2, max;
+									
+									printf("Enter two numbers: ");
+									scanf("%d %d", &num1, &num2);
+									
+									// Call the maximum function and store the result
+									max = maximum(num1, num2);
+									
+									printf("The maximum of %d and %d is %d\n", num1, num2, max);
+									
+									return 0;
+								}
+								
+							</code></pre>
+							</section>
+							
+							<section>
+								<h2>Arguments vs Parameters</h2>
+							</section>
+						<section>
+							The parameters that we pass in a function call are called actual arguments, while the variables defined in the function declaration to receive these arguments are called formal arguments. Actual arguments may be expressed as constants, variables, or more complex expressions and should match the data type of their corresponding formal arguments. 
+						</section>
+						<section>
+							It is important to note that the value of each actual argument is passed into the function and assigned to the corresponding formal argument. In a normal function call, the number of actual arguments should match the number of formal arguments in the function definition.The arguments that appear in a function call are also commonly referred to as parameters, or actual parameters, in addition to being called actual arguments.
+						</section>
+						<section>
+							<pre><code data-trim data-noescape>
+
+							#include <'stdio.h'>
+
+								// function to calculate the area of a circle
+								float calcArea(float radius) {
+									float area = 3.14 * radius * radius;
+									return area;
+								}
+								
+								// function to calculate the circumference of a circle
+								float calcCircumference(float radius) {
+									float circumference = 2 * 3.14 * radius;
+									return circumference;
+								}
+								
+								// function to display the area and circumference of a circle
+								void displayResult(float radius) {
+									float area = calcArea(radius);
+									float circumference = calcCircumference(radius);
+									printf("Radius: %.2f\n", radius);
+									printf("Area: %.2f\n", area);
+									printf("Circumference: %.2f\n", circumference);
+								}
+								
+								int main() {
+									float radius;
+									
+									printf("Enter the radius of the circle: ");
+									scanf("%f", &radius);
+									
+									// call the displayResult function to calculate and display the area and circumference
+									displayResult(radius);
+									
+									return 0;
+								}
+							</code></pre>	
+						</section>
+					<section>
+						<p>The initial function executed in a C program is main(), which leads to the question of when the remaining functions are executed. </p>
+						<p></p>Typically, other functions are executed when they are called either directly or indirectly by main(), forming a chain of nested function calls.</p>
+						<p> It is mandatory for every C program to have a single main() function, along with other functions created or used by the programmer. main() is itself a function, and functions like printf() and scanf() are predefined and used in programs</p>
+					</section>
+					<section>
+						<h2>Library Function & User Defined Function</h2>
+						In C programming language, functions are of two types: Library Function and User-Defined Function.
+					</section>
+					<section>
+						Library functions are built-in functions provided by C standard library. These functions are already defined and we just need to include the appropriate header files and call the function in our program. Examples of library functions include printf(), scanf(), pow(), strlen(), rand(), time(), etc.
+					</section>
+					<section>
+						User-Defined functions are functions that we create ourselves in our program. We define these functions to perform specific tasks within our program. We can reuse the code in these functions throughout our program by calling them whenever we need them.
+						calcArea, calcCircumference, displayResult function we created earlier are the example of User-Defined-Function.
+					</section>
+					<section>
+						<h2>Benefits of User-Defined Function</h2>
+					</section>
+					<section style="font-size: xx-large;">
+						<ul>
+							<li>The use of functions makes a program more readable. It's frequently difficult to read a large program. Breaking the code down into smaller functions keeps the program structured, understandable, and reusable.</li>
+							<li>The function can be reused countless times after it is defined.</li>
+							<li>Using a function, it is possible to reduce the size of a program by calling and using the function at different places in the program.</li>
+							<li>Functions help in code modularity, which means that the entire code is divided into separate blocks, each of which is self-contained and performs a different task. This makes each block implementation and debugging much easier.</li>
+							<li>In top-down structured programming, dividing a program into function is more efficient and easy to understand.</li>
+							<li>If you are just using the function in your program then you don’t have to worry about how it works inside.</li>
+						  </ul>
+						  
+					</section>
+					<section data-background-color="orange">
+						<h4>Function Prototypes</h4>
+					</section>
+					<section style="font-size: xx-large;">
+						In the programs we examined earlier in this chapter, the programmer-defined function has always preceded the main. Thus, when these programs are compiled, the programmer-defined function will have been defined before the first function access. However, many programmers prefer a "top-down" approach, in which the main appears ahead of the programmer-defined function definition. In such situations, the function access (within the main) will precede the function definition. This can confuse the compiler unless the compiler is first alerted that the function being accessed will be defined later in the program. A  function prototype is used for this purpose.
+					</section>
+					<section>
+						A function prototype is a declaration in the code that instructs the compiler about the data type of the function, arguments and parameter list but not the body.
+						<pre><code data-trim data-noescape>
+							return_type function_name(parameter_type1, parameter_type2, ...);
+							int add(int x, int y);
+						</code></pre>
+					</section>
+					<section>
+						<pre><code data-trim data-noescape>
+						#include <'stdio.h'>
+
+							int factorial(int n);
+							
+							int main() {
+								int num, result;
+								printf("Enter a positive integer: ");
+								scanf("%d", &num);
+								result = factorial(num);
+								printf("Factorial of %d is %d", num, result);
+								return 0;
+							}
+							
+							int factorial(int n) {
+								int i, fact = 1;
+								for (i = 1; i <= n; i++) {
+									fact *= i;
+								}
+								return fact;
+							}
+						</code></pre>
+					</section>
+					<section style="font-size: xx-large;">
+						In C programming, argument names in a function prototype are not required to be declared elsewhere in the program as they are considered "dummy" names that are only recognized within the prototype. However, it is not recommended to omit argument names, and it is important to include the argument data types. Typically, the argument names in the prototype are the same as the names of the actual arguments in the function calls. It is crucial that the data types of the actual arguments match those of the arguments within the prototype.
+
+Although function prototypes are not mandatory in C, they are highly recommended because they help with error checking between function calls and their corresponding definitions. By providing the compiler with a prototype, it can verify that the arguments used in the function call match the parameters expected by the function definition. This ensures that the program runs smoothly and reduces the risk of errors.
+
+					</section>
+					<section data-background-color="orange">
+						<h6>
+						Passing Argument to a Function</h6>
+						Passing by value and passing by reference are two different ways of passing arguments to a function in C.
+					</section>
+					<section>
+						When passing by value, a copy of the value of the actual argument is made and passed to the function. Any changes made to the formal argument inside the function are only applied to this copy, and the original actual argument remains unchanged.
+
+In other words, passing by value allows a function to use the value of an argument without affecting the value outside of the function. It is a safe way to pass arguments to a function, as it ensures that the original value is not modified.
+					</section>
+					<section>
+						In passing by reference, a reference (i.e., memory address) to a variable is passed to a function via the actual argument. This allows the function to directly modify the value stored at that memory address, which can result in a change to the value of the actual argument in the calling code.
+					</section>
+					<section>
+						To pass a variable by reference in C, you need to use pointers. The formal argument in the function definition should be a pointer to the data type of the variable being passed by reference. The actual argument in the function call should be the address of the variable (obtained using the & operator).
+					</section>
+					<section>
+						<pre><code data-trim data-noescape>
+
+						#include <'stdio.h'>
+
+							void swap(int x, int y);
+							
+							int main() {
+								int a = 10, b = 20;
+							
+								printf("Before swap: a = %d, b = %d\n", a, b);
+								swap(a, b);
+								printf("After swap: a = %d, b = %d\n", a, b);
+							
+								return 0;
+							}
+							
+							void swap(int x, int y) {
+								int temp = x;
+								x = y;
+								y = temp;
+							
+								printf("Swapped values: x = %d, y = %d\n", x, y);
+							}
+							</code></pre>
+					</section>
+					<section>
+						<pre><code data-trim data-noescape>
+
+						#include <'stdio.h'>
+
+							void swap(int *x, int *y);
+							
+							int main() {
+								int a = 5;
+								int b = 10;
+							
+								printf("Before swap: a = %d, b = %d\n", a, b);
+							
+								swap(&a, &b);
+							
+								printf("After swap: a = %d, b = %d\n", a, b);
+							
+								return 0;
+							}
+							
+							void swap(int *x, int *y) {
+								int temp = *x;
+								*x = *y;
+								*y = temp;
+							
+								printf("Inside swap function: x = %d, y = %d\n", *x, *y);
+							}
+							</code></pre>
+					</section>
+					<section data-background-color="orange">
+						<h6>Recursive Function</h6>
+						<img src="/Imgs/recusrion.png" width="240px"/>
+						</section>
+						<section style="font-size: xx-large;">
+							Recursion is a programming technique where a function calls itself repeatedly until a certain condition is met. It is often used to solve repetitive problems that can be defined in terms of a previous result.
+
+To use recursion, the problem must be defined in a recursive form and the stopping condition must be specified. The stopping condition is used to prevent the function from calling itself indefinitely and causing a stack overflow error.
+
+Recursive functions can be very powerful and can simplify complex problems by breaking them down into smaller subproblems. However, they can also be resource-intensive and may lead to performance issues if not used carefully.
+
+						</section>
+						<section>
+							Let's discuss a classic example of recursion in C: computing the factorial of a number.
+
+The factorial of a non-negative integer n is the product of all positive integers less than or equal to n. We can write this as follows:
+
+n! = n * (n-1) * (n-2) * ... * 2 * 1
+
+Using recursion, we can rewrite this equation as follows:
+
+n! = n * (n-1)!
+
+Notice that we can compute the factorial of n by computing the factorial of (n-1) and then multiplying the result by n. This is a recursive definition of the factorial function.
+						</section>
+						<section>
+							<pre><code data-trim data-noescape>
+
+							int factorial(int n) {
+								if (n == 0) {
+								  return 1;
+								} else {
+								  return n * factorial(n-1);
+								}
+							  }
+							  </code></pre>
+							  if we call factorial(5), the function will compute the result as follows:
+							  <pre><code data-trim data-noescape>
+								factorial(5) = 5 * factorial(4)
+             = 5 * 4 * factorial(3)
+             = 5 * 4 * 3 * factorial(2)
+             = 5 * 4 * 3 * 2 * factorial(1)
+             = 5 * 4 * 3 * 2 * 1 * factorial(0)
+             = 5 * 4 * 3 * 2 * 1 * 1
+             = 120
+
+							</code></pre>
+
+						</section>
+						<section>
+							<pre><code data-trim data-noescape>
+
+							#include <'stdio.h'>
+
+								long int factorial(int n);
+								
+								int main() {
+									int n;
+									printf("Enter a positive integer: ");
+									scanf("%d", &n);
+								
+									if (n < 0) {
+										printf("Error: The input must be a positive integer.\n");
+										return 1;
+									}
+								
+									printf("%d! = %ld\n", n, factorial(n));
+								
+									return 0;
+								}
+								
+								long int factorial(int n) {
+									if (n == 0) {
+										return 1;
+									} else {
+										return n * factorial(n - 1);
+									}
+								}
+								
+							</code></pre>
+						</section>
+						<section>
+							<h6>Towers of Hanoi</h6>
+							<img src="/Imgs/towers.png" />
+						</section>
+						<section style="font-size: xx-large;">
+							The Tower of Hanoi is a mathematical puzzle that consists of three pegs and a number of discs of different sizes. The puzzle starts with all the discs stacked in increasing order of size on one peg, the smallest at the top, creating a conical shape. The objective of the puzzle is to move the entire stack to another peg, obeying the following simple rules:
+							<ul>
+								<li>Only one disc can be moved at a time.</li>
+								<li>Each move consists of taking the uppermost disc from one of the stacks and placing it on top of another stack or on an empty peg.</li>
+								<li>No larger disc may be placed on top of a smaller disc.</li>
+							</ul>
+						</section>
+						<section>
+							<pre><code data-trim data-noescape>
+
+							#include <'stdio.h'>
+
+								void tower_of_hanoi(int n, char source, char destination, char auxiliary) {
+									if (n == 1) {
+										printf("Move disk 1 from %c to %c\n", source, destination);
+										return;
+									}
+									tower_of_hanoi(n - 1, source, auxiliary, destination);
+									printf("Move disk %d from %c to %c\n", n, source, destination);
+									tower_of_hanoi(n - 1, auxiliary, destination, source);
+								}
+								
+								int main() {
+									int n;
+									printf("Enter the number of disks: ");
+									scanf("%d", &n);
+									printf("Solution to the Tower of Hanoi problem with %d disks:\n", n);
+									tower_of_hanoi(n, 'A', 'C', 'B');
+									return 0;
+								}
+								</code></pre>
+						</section>
+
+
+
+					
+	</section>
+
+				
+
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+
+		</script>
+
+	</body>
+</html>

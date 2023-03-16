@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>C Operators</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/theme/override.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					
+				<section>
+						<h1>C-Operators</h2>
+							<h4>Chapter 3</h5>	
+						
+				</section>
+				
+				<section>
+				
+					An <b>operator</b> in a programming language is a symbol that tells the compiler or interpreter to perform specific mathematical, relational or logical operation and produce final result
+					An Operator might have a single or multiple operands.
+				</section>
+				<section data-background-color="orange">
+					<h4>Arithmetic Operators</h4>
+					
+				</section>
+				<section>
+					
+					An <b>arithmetic operator</b> is a mathematical function that takes numeric inputs (Operands) and performs the calculation on them. The result of the calculation is then returned as the output. The calculations that can be performed using arithmetic operators include addition, subtraction, multiplication, division, modulus (remainder), and exponentiation.
+				</section>
+				
+				<section style="font-size: 80">
+
+					<table border="0"><thead><tr><th>Operator</th>
+						<th>Meaning of Operator</th>
+					</tr></thead><tbody>
+						<tr><td>+</td>
+						<td>addition or unary plus</td>
+					</tr><tr><td>-</td>
+						<td>subtraction or unary minus</td>
+					</tr><tr><td>*</td>
+						<td>multiplication</td>
+					</tr><tr><td>/</td>
+						<td>division</td>
+					</tr><tr><td>%</td>
+						<td>remainder after division (modulo division)</td>
+					</tr></tbody></table>
+				</section>
+				<section data-background-color="orange">
+					<h4>Assignment Operators</h4>
+
+				</section>
+				<section>
+					
+					<b>Assignment operators </b>are used to assigning value to a variable. The left side operand of the assignment operator is a variable and right side operand of the assignment operator is a value. The value on the right side must be of the same data-type of the variable on the left side otherwise the compiler will raise an error.
+				</section>
+				<section>
+					<table border="0" style="font-size: x-large;">
+						<tbody>
+						<tr>
+						<td><strong>Operator name</strong></td>
+						<td><strong>Operator</strong></td>
+						<td><strong>Description</strong></td>
+						<td><strong>Equivalent of</strong></td>
+						<td><strong>Example</strong></td>
+						</tr>
+						<tr>
+						<td>basic assignment</td>
+						<td>=</td>
+						<td>p becomes equal to q</td>
+						<td>N/A</td>
+						<td>p = q</td>
+						</tr>
+						<tr>
+						<td>addition assignment</td>
+						<td>+=</td>
+						<td>The addition of p and q becomes equal to p</td>
+						<td>p = p + q</td>
+						<td>p += q</td>
+						</tr>
+						<tr>
+						<td>subtraction assignment</td>
+						<td>-=</td>
+						<td>The subtraction of q from p becomes equal to p</td>
+						<td>p = p – q</td>
+						<td>p -= q</td>
+						</tr>
+						<tr>
+							<td>multiplication assignment</td>
+							<td>*=</td>
+							<td>The product of p and q becomes equal to p</td>
+							<td>p = p * q</td>
+							<td>p *= q</td>
+							</tr>
+							<tr>
+							<td>division assignment</td>
+							<td>/=</td>
+							<td>The division of p by q becomes equal to p</td>
+							<td>p = p / q</td>
+							<td>p /= q</td>
+							</tr>
+							<tr>
+							<td>modulo assignment</td>
+							<td>%=</td>
+							<td>The remainder of p divided by q becomes equal to p</td>
+							<td>p = p % q</td>
+							<td>p %= q</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				
+				
+				<section data-background-color="orange">
+					<h4>Relational or Comparison Operators</h4>
+				</section>
+				<section>
+					In C programming, relational operators such as > (greater than),  (less than), >= (greater than or equal to),  (less than or equal to), == (equal to), and != (not equal to) are used to compare the values of two operands and return a boolean value of either 0 or 1. These operators are used in conditional statements and loops to control the flow of a program based on the evaluation of expressions.
+				</section>
+				<section style="font-size: xx-large;">
+					<table><thead><tr><th>Operator</th>
+						<th>Meaning of Operator</th>
+						<th>Example</th>
+					</tr></thead><tbody><tr><td>==</td>
+						<td>Equal to</td>
+						<td><code>5 == 3</code> is evaluated to 0</td>
+					</tr><tr><td>&gt;</td>
+						<td>Greater than</td>
+						<td><code>5 &gt; 3</code> is evaluated to 1</td>
+					</tr><tr><td>&lt;</td>
+						<td>Less than</td>
+						<td><code>5 &lt; 3</code> is evaluated to 0</td>
+					</tr><tr><td>!=</td>
+						<td>Not equal to</td>
+						<td><code>5 != 3</code> is evaluated to 1</td>
+					</tr><tr><td>&gt;=</td>
+						<td>Greater than or equal to</td>
+						<td><code>5 &gt;= 3</code> is evaluated to 1</td>
+					</tr><tr><td>&lt;=</td>
+						<td>Less than or equal to</td>
+						<td><code>5 &lt;= 3</code> is evaluated to 0</td>
+					</tr></tbody></table>
+				</section>
+				<section data-background-color="orange">
+					<h4>Logical Operators</h4>
+
+				</section>
+				<section>
+					In C programming, logical operators such as && (AND), || (OR), and ! (NOT) are used to perform operations on boolean values (i.e., 0 or 1) and return a boolean result. These operators are commonly used in conditional statements to control the flow of a program based on the evaluation of expressions.
+				</section>
+				<section style="font-size: xx-large;">
+					<table border="0"><thead><tr><th>Operator</th>
+						<th>Meaning</th>
+						<th>Example</th>
+					</tr></thead><tbody><tr><td>&amp;&amp;</td>
+						<td>Logical AND. True only if all operands are true</td>
+						<td>If c = 5 and d = 2 then, expression <code>((c==5) &amp;&amp; (d&gt;5))</code> equals to 0.</td>
+					</tr><tr><td>||</td>
+						<td>Logical OR. True only if either one operand is true</td>
+						<td>If c = 5 and d = 2 then, expression <code>((c==5) || (d&gt;5))</code> equals to 1.</td>
+					</tr><tr><td>!</td>
+						<td>Logical NOT. True only if the operand is 0</td>
+						<td>If c = 5 then, expression <code>!(c==5)</code> equals to 0.</td>
+					</tr></tbody></table>
+				</section>
+				<section>
+					<h4>Unary Operator</h4>
+					A unary operator is an operator used to operate on a single operand to return a new value. In other words, it is an operator that updates the value of an operand or expression's value by using the appropriate unary operators.
+				</section>
+				<section style="font-size: x-large;">
+					<table>
+						<thead>
+							<tr>
+								<th>Operator</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>++ (increment operator)</td>
+								<td>Increments the value of an operand by 1</td>
+							</tr>
+							<tr>
+								<td>-- (decrement operator)</td>
+								<td>Decrements the value of an operand by 1</td>
+							</tr>
+							<tr>
+								<td>- (unary minus operator)</td>
+								<td>Negates the value of an operand</td>
+							</tr>
+							
+						</tbody>
+					</table>
+				</section>
+				
+				<section data-background-color="orange">
+					<h4 >Bitwise Operators</h4>
+				</section>
+				<section>
+					Operators that perform bit-level operations on integer values. They treat their operands as sequences of binary digits (bits) and operate on each bit individually.They are often used in low-level programming, such as working with hardware or encoding data.
+				</section>
+				<section>
+					<div class="table-responsive"><table border="0"><thead><tr><th>Operators</th>
+						<th>Meaning of operators</th>
+					</tr></thead><tbody><tr><td>&amp;</td>
+						<td>Bitwise AND</td>
+					</tr><tr><td>|</td>
+						<td>Bitwise OR</td>
+					</tr><tr><td>^</td>
+						<td>Bitwise exclusive OR</td>
+					</tr><tr><td>~</td>
+						<td>Bitwise complement</td>
+					</tr><tr><td>&lt;&lt;</td>
+						<td>Shift left</td>
+					</tr><tr><td>&gt;&gt;</td>
+						<td>Shift right</td>
+					</tr></tbody></table></div>
+				</section>
+				<section data-background-color="orange">
+					<h4 >Conditional Operators</h4>
+				</section>
+				<section>
+					The conditional operator is also known as a ternary operator. The conditional statements are the decision-making statements which depends upon the output of the expression. It is represented by two symbols, i.e., '?' and ':'.
+
+As conditional operator works on three operands, so it is also known as the ternary operator.
+				</section>
+				<section>
+					<pre><code data-trim data-noescape>
+					Expression1? expression2: expression3; </code></pre>
+
+				</section>
+				<section data-background-color="orange">
+					<h4>LAB</h4>
+				</section>
+				<section data-markdown="/lab/Chap3_Lab1.md"
+         data-separator="^\n\n\n"
+         data-separator-vertical="^\n\n"
+         data-separator-notes="^Note:"
+         data-charset="iso-8859-15">
+</section><section data-markdown="/lab/Chap3_Lab2.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section><section data-markdown="/lab/Chap3_Lab3.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+
+<section data-markdown="/lab/Chap3_Lab5.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+
+			</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

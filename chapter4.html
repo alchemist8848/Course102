@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Writing a Program in C</title>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<link rel="stylesheet" href="css/override.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+				<section>
+					  
+					  <h1>Writing a Program in C (Data Input and Output) </h2>
+						<h4>Chapter 4</h5>	
+					</section> 				
+				  <section data-markdown="/lab/chap4_Lab1.md"
+         data-separator="^\n\n\n"
+         data-separator-vertical="^\n\n"
+         data-separator-notes="^Note:"
+         data-charset="iso-8859-15">
+</section>
+<section style="font-size: xx-large;">
+	<p>The preprocessor directive <code>#include &lt;stdio.h&gt;</code> is processed, which includes the contents of the <code>stdio.h</code> file and makes the <code>printf()</code> function available to the program.</p>
+
+<p>The program then enters the <code>main()</code> function.</p>
+
+<p>The <code>printf()</code> function is called and the string "Hello, world!\n" is printed to the console.</p>
+
+<p>The <code>return 0;</code> statement is executed, and the program exits.</p>
+
+</section><section data-markdown="/lab/chap4_Lab2.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+<section style="font-size: xx-large;">
+	#include stdio.h line includes the standard input/output library in the program. printf("Enter two integers: ");: This line prints a message "Enter two integers: " to the user.scanf("%d %d", &num1, &num2);: This line reads two integer inputs from the user and stores them in the variables "num1" and "num2". The "&" symbol before the variable names is used to get their addresses and pass them as arguments to the "scanf" function.
+
+  </section>
+<section>
+	The header file stdio.h stands for Standard Input Output. This header file in the C programming language that provides input and output operations. It is a standard library file that contains functions for performing input and output operations, such as reading from the keyboard and writing to the screen.  
+</section>
+<section>
+	The most commonly used functions in this library are printf and scanf, which are used for output and input respectively. It also contains some functions like gets, puts, fgets and fputs to read and write from and to files. 
+</section>
+<section style="font-size: xx-large;"><table>
+	<tr>
+	  <th>Function</th>
+	  <th>Description</th>
+	</tr>
+	<tr>
+	  <td>printf()</td>
+	  <td>Displays output on the console. It can print text, numbers, and variables on the screen</td>
+	</tr>
+	<tr>
+	  <td>scanf()</td>
+	  <td>Reads input from the user. It can read various types of data, such as integers, floating-point numbers, and strings, from the keyboard</td>
+	</tr>
+	<tr>
+	  <td>getchar() and putchar()</td>
+	  <td>Reads and writes individual characters from and to the console, respectively</td>
+	</tr>
+	<tr>
+	  <td>gets() and puts()</td>
+	  <td>Reads and writes strings from and to the console, respectively</td>
+	</tr>
+	<tr>
+	  <td>fopen(), fclose(), fgets() and fputs()</td>
+	  <td>Used to read and write from and to files</td>
+	</tr>
+  </table>
+  </section> 
+  <section style="font-size: xx-large;">
+	<table border="0"><thead><tr><th>Data Type</th>
+		<th>Format Specifier</th>
+	</tr></thead><tbody><tr><td><code>int</code></td>
+		<td><code>%d</code></td>
+	</tr><tr><td><code>char</code></td>
+		<td><code>%c</code></td>
+	</tr><tr><td><code>float</code></td>
+		<td><code>%f</code></td>
+	</tr><tr><td><code>double</code></td>
+		<td><code>%lf</code></td>
+	</tr><tr><td><code>short int</code></td>
+		<td><code>%hd</code></td>
+	</tr><tr><td><code>unsigned int</code></td>
+		<td><code>%u</code></td>
+	</tr><tr><td><code>long int</code></td>
+		<td><code>%li</code></td>
+	</tr><tr><td><code>long long int</code></td>
+		<td><code>%lli</code></td>
+	</tr><tr><td><code>unsigned long int</code></td>
+		<td><code>%lu</code></td>
+	</tr><tr><td><code>unsigned long long int</code></td>
+		<td><code>%llu</code></td>
+	</tr><tr><td><code>signed char</code></td>
+		<td><code>%c</code></td>
+	</tr><tr><td><code>unsigned char</code></td>
+		<td><code>%c</code></td>
+	</tr><tr><td><code>long double</code></td>
+		<td><code>%Lf</code></td>
+	</tr></tbody></table>
+  </section>
+  <section data-background-color="orange">
+	<h4>LAB</h4>
+</section>
+<section data-markdown="/lab/chap4_Lab3.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+<section data-markdown="/lab/chap4_Lab4.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+<section data-markdown="/lab/chap4_Lab5.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+<section data-markdown="/lab/chap4_Lab6.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+<section data-markdown="/lab/chap4_Lab7.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+<section data-markdown="/lab/chap4_Lab8.md"
+data-separator="^\n\n\n"
+data-separator-vertical="^\n\n"
+data-separator-notes="^Note:"
+data-charset="iso-8859-15">
+</section>
+</section>
+
+		</section>
+			</div>
+		</div>
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
